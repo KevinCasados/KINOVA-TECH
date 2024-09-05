@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom'; // Cambiado a HashRouter
 import Home from '../pages/Home/Home';
 import Products from '../pages/Products/Products';
 import Login from '../pages/Login/Login';
@@ -13,7 +13,7 @@ import Saved from '../pages/SavedProducts/saved';
 
 const App = () => {
   return (
-    <Router>
+    <Router> {/* HashRouter en lugar de BrowserRouter */}
       <GlobalStyle />
       <Routes>
         <Route path="/" element={<Home />} />
