@@ -5,7 +5,7 @@
             "name": "Pro X 60",
             "category": "Keyboards",
             "price": 100,
-            "image": "/assets/products/keyboards/pro-x-60.png",
+            "image": "${process.env.PUBLIC_URL}/assets/products/keyboards/pro-x-60.png",
             "description": "LIGHTSYNC RGB mechanical keyboard for competitive gaming.",
             "features": {
               "lighting": ["LIGHTSYNC RGB"],
