@@ -1,18 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
+    <meta http-equiv="refresh" content="0; URL=./index.html?redirected=true" />
     <script type="text/javascript">
-      // Solo redirigir si no está el parámetro redirect
-      if (!window.location.search.includes('redirect')) {
-        var redirectPath = window.location.pathname;
-        window.location.href = '/KINOVA-TECH/index.html?redirect=' + redirectPath;
-      }
+      // Redirigir la página y manejar la ruta original
+      var redirect = window.location.pathname;
+      var query = '?redirect=' + redirect;
+      window.location.replace('/KINOVA-TECH/index.html' + query);
     </script>
   </head>
   <body>
-    <p>Redirecting...</p>
   </body>
 </html>
