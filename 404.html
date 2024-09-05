@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
     <script type="text/javascript">
-      // Solo redirigir si no está el parámetro redirect
-      if (!window.location.search.includes('redirect')) {
+      // Redirigir solo si la URL no incluye index.html y no tiene el parámetro "redirect"
+      if (!window.location.pathname.includes('index.html') && !window.location.search.includes('redirect')) {
         var redirectPath = window.location.pathname;
         window.location.href = '/KINOVA-TECH/index.html?redirect=' + redirectPath;
       }
