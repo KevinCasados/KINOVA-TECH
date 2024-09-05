@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta http-equiv="refresh" content="0; URL=/" />
-  <script>
-    // Esto redirige al index.html cuando la página da un 404
-    window.location.href = "/";
-  </script>
-</head>
-<body>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0; URL=./index.html?redirected=true" />
+    <script type="text/javascript">
+      // Redirigir la página y manejar la ruta original
+      var redirect = window.location.pathname;
+      var query = '?redirect=' + redirect;
+      window.location.replace('/KINOVA-TECH/index.html' + query);
+    </script>
+  </head>
+  <body>
+  </body>
 </html>
