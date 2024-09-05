@@ -2,12 +2,14 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; URL=./index.html?redirected=true" />
     <script type="text/javascript">
-      // Redirigir la página y manejar la ruta original
-      var redirect = window.location.pathname;
-      var query = '?redirect=' + redirect;
-      window.location.replace('/KINOVA-TECH/index.html' + query);
+      // Solo redirigir si el parámetro "redirect" no está presente en la URL
+      if (!window.location.search.includes('redirect')) {
+        var redirect = window.location.pathname;
+        var query = '?redirect=' + redirect;
+        // Redirigir a index.html agregando el parámetro redirect solo si no está presente
+        window.location.replace('/KINOVA-TECH/index.html' + query);
+      }
     </script>
   </head>
   <body>
