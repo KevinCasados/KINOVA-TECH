@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/KINOVA-TECH/static/css/main.58462fbc.css",
+    "main.js": "/KINOVA-TECH/static/js/main.8aa25ec1.js",
+    "static/media/mouse-category-2.jpg": "/KINOVA-TECH/static/media/mouse-category-2.144df01dbdf346006f57.jpg",
+    "static/media/headphones-category.jpg": "/KINOVA-TECH/static/media/headphones-category.2525357a01c46ba03d9e.jpg",
+    "static/media/pro-gamer-carrousel.jpg": "/KINOVA-TECH/static/media/pro-gamer-carrousel.fdab3025d40380db1a46.jpg",
+    "static/media/hero-headphones.png": "/KINOVA-TECH/static/media/hero-headphones.c1f5875213ae3bb5d52f.png",
+    "static/media/hero-headphones-v4.png": "/KINOVA-TECH/static/media/hero-headphones-v4.f9c5f94e15a3bbed6111.png",
+    "static/media/keyboard-category.jpg": "/KINOVA-TECH/static/media/keyboard-category.5bd4af7b922f75d5f3e9.jpg",
+    "static/media/banner-slider.jpg": "/KINOVA-TECH/static/media/banner-slider.3bf2583b8b9d163c3653.jpg",
+    "static/media/all-products-banner.jpg": "/KINOVA-TECH/static/media/all-products-banner.30d5884382b08932b5d9.jpg",
+    "static/media/logo-msi.png": "/KINOVA-TECH/static/media/logo-msi.dd2293ad8e1e629ba973.png",
+    "static/media/click-mecanico-dragon-v2-fix.jpg": "/KINOVA-TECH/static/media/click-mecanico-dragon-v2-fix.b43c1356a149b9f56b87.jpg",
+    "static/media/logo-kinova-letras-blanco.png": "/KINOVA-TECH/static/media/logo-kinova-letras-blanco.35b537ef8e141d1daf9e.png",
+    "static/media/logo_rog.png": "/KINOVA-TECH/static/media/logo_rog.88734d97f5c7a01fb162.png",
+    "static/media/Logo_Razer.png": "/KINOVA-TECH/static/media/Logo_Razer.0afc634f6ad5b441d15a.png",
+    "static/media/logo-corsair.png": "/KINOVA-TECH/static/media/logo-corsair.cfc20d2b0a24d835c6b6.png",
+    "index.html": "/KINOVA-TECH/index.html",
+    "main.58462fbc.css.map": "/KINOVA-TECH/static/css/main.58462fbc.css.map",
+    "main.8aa25ec1.js.map": "/KINOVA-TECH/static/js/main.8aa25ec1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.58462fbc.css",
+    "static/js/main.8aa25ec1.js"
+  ]
+}
