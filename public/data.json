@@ -1,0 +1,615 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Pro X 60",
+            "category": "Keyboards",
+            "price": 100,
+            "image": "/assets/products/keyboards/pro-x-60.png",
+            "description": "LIGHTSYNC RGB mechanical keyboard for competitive gaming.",
+            "features": {
+              "lighting": ["LIGHTSYNC RGB"],
+              "connectivity": ["Wired"],
+              "series": "PRO"
+            }
+          },
+          {
+            "id": 2,
+            "name": "Pro X TKL",
+            "category": "Keyboards",
+            "price": 200,
+            "image": "/assets/products/keyboards/pro-x-tkl.png",
+            "description": "Bluetooth-enabled mechanical keyboard with backlighting.",
+            "features": {
+              "lighting": ["Backlighting"],
+              "connectivity": ["Bluetooth"],
+              "series": "PRO"
+            }
+          },
+          {
+            "id": 3,
+            "name": "G915",
+            "category": "Keyboards",
+            "price": 5799,
+            "image": "/assets/products/keyboards/g915.png",
+            "description": "LIGHTSPEED wireless keyboard with LIGHTSYNC RGB lighting.",
+            "features": {
+              "lighting": ["LIGHTSYNC RGB"],
+              "connectivity": ["LIGHTSPEED Wireless Technology"],
+              "series": "G"
+            }
+          },
+          {
+            "id": 4,
+            "name": "G713",
+            "category": "Keyboards",
+            "price": 3899,
+            "image": "/assets/products/keyboards/g713.png",
+            "description": "Wired mechanical keyboard with customizable backlighting.",
+            "features": {
+              "lighting": ["Backlighting"],
+              "connectivity": ["Wired"],
+              "series": "G"
+            }
+          },
+          {
+            "id": 5,
+            "name": "G915 TKL",
+            "category": "Keyboards",
+            "price": 4399,
+            "image": "/assets/products/keyboards/g915-tkl.png",
+            "description": "Compact, wireless mechanical keyboard with LIGHTSYNC RGB.",
+            "features": {
+              "lighting": ["LIGHTSYNC RGB"],
+              "connectivity": ["LIGHTSPEED Wireless Technology"],
+              "series": "G"
+            }
+          },
+          {
+            "id": 6,
+            "name": "G413 SE",
+            "category": "Keyboards",
+            "price": 1899,
+            "image": "/assets/products/keyboards/g413-se.png",
+            "description": "Mechanical keyboard with backlighting and a sleek design.",
+            "features": {
+              "lighting": ["Backlighting"],
+              "connectivity": ["Wired"],
+              "series": "G"
+            }
+          },
+          {
+            "id": 7,
+            "name": "G213 Prodigy",
+            "category": "Keyboards",
+            "price": 1499,
+            "image": "/assets/products/keyboards/g213-prodigy.png",
+            "description": "Affordable gaming keyboard with backlighting for an immersive experience.",
+            "features": {
+              "lighting": ["Backlighting"],
+              "connectivity": ["Wired"],
+              "series": "G"
+            }
+          },
+          {
+            "id": 8,
+            "name": "G613",
+            "category": "Keyboards",
+            "price": 3699,
+            "image": "/assets/products/keyboards/g613.png",
+            "description": "Wireless gaming keyboard with LIGHTSPEED technology and backlighting.",
+            "features": {
+              "lighting": ["Backlighting"],
+              "connectivity": ["LIGHTSPEED Wireless Technology"],
+              "series": "G"
+            }
+          },
+          {
+            "id": 9,
+            "name": "G413",
+            "category": "Keyboards",
+            "price": 2999,
+            "image": "/assets/products/keyboards/g413.png",
+            "description": "Mechanical keyboard with durable design and backlighting.",
+            "features": {
+              "lighting": ["Backlighting"],
+              "connectivity": ["Wired"],
+              "series": "G"
+            }
+          },
+          {
+            "id": 10,
+            "name": "G513 Carbon",
+            "category": "Keyboards",
+            "price": 3699,
+            "image": "/assets/products/keyboards/g513-carbon.png",
+            "description": "Mechanical keyboard with LIGHTSYNC RGB lighting and carbon-fiber design.",
+            "features": {
+              "lighting": ["LIGHTSYNC RGB"],
+              "connectivity": ["Wired"],
+              "series": "G"
+            }
+          },
+          {
+            "id": 11,
+            "name": "G815",
+            "category": "Keyboards",
+            "price": 5199,
+            "image": "/assets/products/keyboards/g815.png",
+            "description": "Low-profile mechanical keyboard with LIGHTSYNC RGB and sleek design.",
+            "features": {
+              "lighting": ["LIGHTSYNC RGB"],
+              "connectivity": ["Wired"],
+              "series": "G"
+            }
+          },
+          {
+            "id": 12,
+            "name": "G915 TKL",
+            "category": "Keyboards",
+            "price": 4399,
+            "image": "/assets/products/keyboards/g915-tkl.png",
+            "description": "Compact mechanical gaming keyboard with wireless connectivity.",
+            "features": {
+              "lighting": ["LIGHTSYNC RGB"],
+              "connectivity": ["LIGHTSPEED Wireless Technology"],
+              "series": "G"
+            }
+          },
+          {
+            "id": 13,
+            "name": "G413 TKL SE",
+            "category": "Keyboards",
+            "price": 1699,
+            "image": "/assets/products/keyboards/g413-tkl-se.png",
+            "description": "Tenkeyless mechanical keyboard with backlighting.",
+            "features": {
+              "lighting": ["Backlighting"],
+              "connectivity": ["Wired"],
+              "series": "G"
+            }
+          },
+          {
+            "id": 14,
+            "name": "G515 LIGHTSPEED TKL",
+            "category": "Keyboards",
+            "price": 2999,
+            "image": "/assets/products/keyboards/g515-lightspeed-tkl.png",
+            "description": "Compact wireless keyboard with LIGHTSYNC RGB and LIGHTSPEED technology.",
+            "features": {
+              "lighting": ["LIGHTSYNC RGB"],
+              "connectivity": ["LIGHTSPEED Wireless Technology"],
+              "series": "G"
+            }
+          },
+          {
+            "id": 15,
+            "name": "PRO X Superlight 2",
+            "category": "Gaming Mouse",
+            "price": 3499,
+            "image": "/assets/products/mouse/pro-x-superlight-2.png",
+            "description": "Ultra-light wireless gaming mouse with LIGHTSYNC RGB.",
+            "features": {
+              "lighting": ["LIGHTSYNC RGB"],
+              "connectivity": ["Wireless"],
+              "series": "PRO"
+            }
+          },
+          {
+            "id": 16,
+            "name": "Mouse G502 X Plus",
+            "category": "Gaming Mouse",
+            "price": 3699,
+            "image": "/assets/products/mouse/g502-x-plus.png",
+            "description": "Advanced wireless gaming mouse with customizable RGB lighting.",
+            "features": {
+              "lighting": ["LIGHTSYNC RGB"],
+              "connectivity": ["Wireless"],
+              "series": "G"
+            }
+          },
+          {
+            "id": 17,
+            "name": "G705",
+            "category": "Gaming Mouse",
+            "price": 1999,
+            "image": "/assets/products/mouse/g705.png",
+            "description": "Compact wireless gaming mouse with backlighting.",
+            "features": {
+              "lighting": ["Backlighting"],
+              "connectivity": ["Wireless"],
+              "series": "G"
+            }
+          },
+          {
+            "id": 18,
+            "name": "PRO X Superlight",
+            "category": "Gaming Mouse",
+            "price": 3499,
+            "image": "/assets/products/mouse/pro-x-superlight.png",
+            "description": "Wireless gaming mouse with ultra-light design and backlighting.",
+            "features": {
+              "lighting": ["Backlighting"],
+              "connectivity": ["Wireless"],
+              "series": "PRO"
+            }
+          },
+          {
+            "id": 19,
+            "name": "Mouse G502 X LIGHTSPEED",
+            "category": "Gaming Mouse",
+            "price": 3399,
+            "image": "/assets/products/mouse/g502-x-lightspeed.png",
+            "description": "Wireless gaming mouse with LIGHTSPEED technology and customizable RGB.",
+            "features": {
+              "lighting": ["LIGHTSYNC RGB"],
+              "connectivity": ["Wireless"],
+              "series": "G"
+            }
+          },
+          {
+            "id": 20,
+            "name": "Mouse G502 X",
+            "category": "Gaming Mouse",
+            "price": 1799,
+            "image": "/assets/products/mouse/g502-x.png",
+            "description": "Wired gaming mouse with backlighting and customizable settings.",
+            "features": {
+              "lighting": ["Backlighting"],
+              "connectivity": ["Wired"],
+              "series": "G"
+            }
+          },
+          {
+            "id": 21,
+            "name": "G502",
+            "category": "Gaming Mouse",
+            "price": 3299,
+            "image": "/assets/products/mouse/g502.png",
+            "description": "Wired gaming mouse with LIGHTSYNC RGB and HERO sensor.",
+            "features": {
+              "lighting": ["LIGHTSYNC RGB"],
+              "connectivity": ["Wired"],
+              "series": "G"
+            }
+          },
+          {
+            "id": 22,
+            "name": "Logitech G303 Shroud Edition",
+            "category": "Gaming Mouse",
+            "price": 2699,
+            "image": "/assets/products/mouse/g303-shroud.png",
+            "description": "Wireless gaming mouse co-designed with Shroud, featuring backlighting.",
+            "features": {
+              "lighting": ["Backlighting"],
+              "connectivity": ["Wireless"],
+              "series": "G"
+            }
+          },
+          {
+            "id": 23,
+            "name": "G305",
+            "category": "Gaming Mouse",
+            "price": 1599,
+            "image": "/assets/products/mouse/g305.png",
+            "description": "Wireless gaming mouse with LIGHTSYNC RGB and lightweight design.",
+            "features": {
+              "lighting": ["LIGHTSYNC RGB"],
+              "connectivity": ["Wireless"],
+              "series": "G"
+            }
+          },
+          {
+            "id": 24,
+            "name": "G502 HERO",
+            "category": "Gaming Mouse",
+            "price": 1699,
+            "image": "/assets/products/mouse/g502-hero.png",
+            "description": "Wired gaming mouse with HERO sensor and LIGHTSYNC RGB.",
+            "features": {
+              "lighting": ["LIGHTSYNC RGB"],
+              "connectivity": ["Wired"],
+              "series": "G"
+            }
+          },
+          {
+            "id": 25,
+            "name": "G903",
+            "category": "Gaming Mouse",
+            "price": 3799,
+            "image": "/assets/products/mouse/g903.png",
+            "description": "Wireless gaming mouse with LIGHTSYNC RGB and advanced HERO sensor.",
+            "features": {
+              "lighting": ["LIGHTSYNC RGB"],
+              "connectivity": ["Wireless"],
+              "series": "G"
+            }
+          },
+          {
+            "id": 26,
+            "name": "G703",
+            "category": "Gaming Mouse",
+            "price": 2499,
+            "image": "/assets/products/mouse/g703.png",
+            "description": "Wireless gaming mouse with ergonomic design and backlighting.",
+            "features": {
+              "lighting": ["Backlighting"],
+              "connectivity": ["Wireless"],
+              "series": "G"
+            }
+          },
+          {
+            "id": 27,
+            "name": "G600",
+            "category": "Gaming Mouse",
+            "price": 1399,
+            "image": "/assets/products/mouse/g600.png",
+            "description": "Wired MMO gaming mouse with programmable buttons and RGB lighting.",
+            "features": {
+              "lighting": ["LIGHTSYNC RGB"],
+              "connectivity": ["Wired"],
+              "series": "G"
+            }
+          },
+          {
+            "id": 28,
+            "name": "G203",
+            "category": "Gaming Mouse",
+            "price": 629,
+            "image": "/assets/products/mouse/g203.png",
+            "description": "Wired gaming mouse with LIGHTSYNC RGB lighting and compact design.",
+            "features": {
+              "lighting": ["LIGHTSYNC RGB"],
+              "connectivity": ["Wired"],
+              "series": "G"
+            }
+          },
+          {
+            "id": 29,
+            "name": "Pro Gaming Mouse",
+            "category": "Gaming Mouse",
+            "price": 1399,
+            "image": "/assets/products/mouse/pro-gaming.png",
+            "description": "Wired professional gaming mouse with backlighting.",
+            "features": {
+              "lighting": ["Backlighting"],
+              "connectivity": ["Wired"],
+              "series": "PRO"
+            }
+          },
+          {
+            "id": 30,
+            "name": "G403",
+            "category": "Gaming Mouse",
+            "price": 1399,
+            "image": "/assets/products/mouse/g403.png",
+            "description": "Wired gaming mouse with LIGHTSYNC RGB and ergonomic design.",
+            "features": {
+              "lighting": ["LIGHTSYNC RGB"],
+              "connectivity": ["Wired"],
+              "series": "G"
+            }
+          },
+      {
+        "id": 31,
+        "name": "ASTRO A50 X",
+        "category": "Headsets",
+        "price": 7499,
+        "image": "/assets/products/headsets/astro-a50-x.png",
+        "description": "Wireless gaming headset with microphone + base station",
+        "features": {
+          "lighting": ["None"],
+          "connectivity": ["Wireless"],
+          "series": "ASTRO"
+        }
+      },
+      {
+        "id": 32,
+        "name": "PRO X 2 LIGHTSPEED",
+        "category": "Headsets",
+        "price": 5299,
+        "image": "/assets/products/headsets/pro-x-2-lightspeed.png",
+        "description": "Wireless gaming headset with microphone and LIGHTSPEED technology",
+        "features": {
+          "lighting": ["None"],
+          "connectivity": ["Wireless"],
+          "series": "PRO"
+        }
+      },
+      {
+        "id": 33,
+        "name": "Base Station + ASTRO A50 Wireless",
+        "category": "Headsets",
+        "price": 6999,
+        "image": "/assets/products/headsets/base-station-astro-a50.png",
+        "description": "Wireless gaming headset for Xbox, PlayStation, and PC/MAC",
+        "features": {
+          "lighting": ["None"],
+          "connectivity": ["Wireless"],
+          "series": "ASTRO"
+        }
+      },
+      {
+        "id": 34,
+        "name": "ASTRO A30 Wireless",
+        "category": "Headsets",
+        "price": 4899,
+        "image": "/assets/products/headsets/astro-a30.png",
+        "description": "Wireless gaming headset for Xbox, PlayStation, PC, and mobile devices",
+        "features": {
+          "lighting": ["None"],
+          "connectivity": ["Wireless"],
+          "series": "ASTRO"
+        }
+      },
+      {
+        "id": 35,
+        "name": "G735",
+        "category": "Headsets",
+        "price": 4999,
+        "image": "/assets/products/headsets/g735.png",
+        "description": "Wireless gaming headset with microphone",
+        "features": {
+          "lighting": ["RGB"],
+          "connectivity": ["Wireless"],
+          "series": "G"
+        }
+      },
+      {
+        "id": 36,
+        "name": "ASTRO A40 TR + MixAmp Pro TR",
+        "category": "Headsets",
+        "price": 5999,
+        "image": "/assets/products/headsets/astro-a40-tr-mixamp.png",
+        "description": "Wired gaming headset with MixAmp for Xbox, PlayStation, and PC/MAC",
+        "features": {
+          "lighting": ["None"],
+          "connectivity": ["Wired"],
+          "series": "ASTRO"
+        }
+      },
+      {
+        "id": 37,
+        "name": "G560",
+        "category": "Speakers",
+        "price": 5999,
+        "image": "/assets/products/speakers/g560.png",
+        "description": "LIGHTSYNC RGB speaker system for PC gaming",
+        "features": {
+          "lighting": ["LIGHTSYNC RGB"],
+          "connectivity": ["Wired"],
+          "series": "G"
+        }
+      },
+      {
+        "id": 38,
+        "name": "G733",
+        "category": "Headsets",
+        "price": 3699,
+        "image": "/assets/products/headsets/g733.png",
+        "description": "Wireless gaming headset with RGB microphone",
+        "features": {
+          "lighting": ["RGB"],
+          "connectivity": ["Wireless"],
+          "series": "G"
+        }
+      },
+      {
+        "id": 39,
+        "name": "ASTRO A30 - The Mandalorian Edition",
+        "category": "Headsets",
+        "price": 0,
+        "image": "/assets/products/headsets/astro-a30-mandalorian.png",
+        "description": "Wireless gaming headset with microphone for Xbox, PlayStation, PC/MAC, and mobile devices",
+        "features": {
+          "lighting": ["None"],
+          "connectivity": ["Wireless"],
+          "series": "ASTRO"
+        }
+      },
+      {
+        "id": 40,
+        "name": "PRO X Wireless",
+        "category": "Headsets",
+        "price": 4499,
+        "image": "/assets/products/headsets/pro-x-wireless.png",
+        "description": "LIGHTSPEED wireless gaming headset",
+        "features": {
+          "lighting": ["None"],
+          "connectivity": ["Wireless"],
+          "series": "PRO"
+        }
+      },
+      {
+        "id": 41,
+        "name": "ASTRO A40 TR",
+        "category": "Headsets",
+        "price": 3499,
+        "image": "/assets/products/headsets/astro-a40-tr.png",
+        "description": "Wired gaming headset for Xbox, PlayStation, and PC/MAC",
+        "features": {
+          "lighting": ["None"],
+          "connectivity": ["Wired"],
+          "series": "ASTRO"
+        }
+      },
+      {
+        "id": 42,
+        "name": "ASTRO A20 Wireless",
+        "category": "Headsets",
+        "price": 2899,
+        "image": "/assets/products/headsets/astro-a20-wireless.png",
+        "description": "Wireless gaming headset for Xbox, PlayStation, and PC/MAC",
+        "features": {
+          "lighting": ["None"],
+          "connectivity": ["Wireless"],
+          "series": "ASTRO"
+        }
+      },
+      {
+        "id": 43,
+        "name": "G435",
+        "category": "Headsets",
+        "price": 1999,
+        "image": "/assets/products/headsets/g435.png",
+        "description": "Wireless gaming headset with microphone",
+        "features": {
+          "lighting": ["None"],
+          "connectivity": ["Wireless"],
+          "series": "G"
+        }
+      },
+      {
+        "id": 44,
+        "name": "ASTRO A10",
+        "category": "Headsets",
+        "price": 1499,
+        "image": "/assets/products/headsets/astro-a10.png",
+        "description": "Wired gaming headset for Xbox, PlayStation, Switch, and PC",
+        "features": {
+          "lighting": ["None"],
+          "connectivity": ["Wired"],
+          "series": "ASTRO"
+        }
+      },
+      {
+        "id": 45,
+        "name": "G535 LIGHTSPEED",
+        "category": "Headsets",
+        "price": 2499,
+        "image": "/assets/products/headsets/g535-lightspeed.png",
+        "description": "Wireless gaming headset with LIGHTSPEED technology",
+        "features": {
+          "lighting": ["None"],
+          "connectivity": ["Wireless"],
+          "series": "G"
+        }
+      },
+      {
+        "id": 46,
+        "name": "G635",
+        "category": "Headsets",
+        "price": 3399,
+        "image": "/assets/products/headsets/g635.png",
+        "description": "Gaming headset with 7.1 surround sound and LIGHTSYNC",
+        "features": {
+          "lighting": ["LIGHTSYNC RGB"],
+          "connectivity": ["Wired"],
+          "series": "G"
+        }
+      },
+      {
+        "id": 47,
+        "name": "G335",
+        "category": "Headsets",
+        "price": 1399,
+        "image": "/assets/products/headsets/g335.png",
+        "description": "Wired gaming headset with microphone",
+        "features": {
+          "lighting": ["None"],
+          "connectivity": ["Wired"],
+          "series": "G"
+        }
+      }
+    ]
+}
