@@ -125,7 +125,8 @@ const ProductsList = ({ categoryFilter = 'All' }) => {
           filteredProducts.map((product) => (
             <div key={product.id}>
               <h2>{product.name}</h2>
-              <img src={product.image} alt={product.name} />
+              {/* Ajuste de la ruta de la imagen */}
+              <img src={`${process.env.PUBLIC_URL}${product.image}`} alt={product.name} />
               <p>{product.category}</p>
               <p>${product.price}</p>
             </div>
