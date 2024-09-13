@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/KINOVA-TECH/static/css/main.58462fbc.css",
-    "main.js": "/KINOVA-TECH/static/js/main.b7549425.js",
+    "main.js": "/KINOVA-TECH/static/js/main.b495ac82.js",
     "static/media/mouse-category-2.jpg": "/KINOVA-TECH/static/media/mouse-category-2.144df01dbdf346006f57.jpg",
     "static/media/headphones-category.jpg": "/KINOVA-TECH/static/media/headphones-category.2525357a01c46ba03d9e.jpg",
     "static/media/pro-gamer-carrousel.jpg": "/KINOVA-TECH/static/media/pro-gamer-carrousel.fdab3025d40380db1a46.jpg",
@@ -9,8 +9,15 @@
     "static/media/hero-headphones-v4.png": "/KINOVA-TECH/static/media/hero-headphones-v4.f9c5f94e15a3bbed6111.png",
     "static/media/keyboard-category.jpg": "/KINOVA-TECH/static/media/keyboard-category.5bd4af7b922f75d5f3e9.jpg",
     "static/media/banner-slider.jpg": "/KINOVA-TECH/static/media/banner-slider.3bf2583b8b9d163c3653.jpg",
+    "static/media/keyboard-banner.png": "/KINOVA-TECH/static/media/keyboard-banner.df9a41c44125bf91f537.png",
     "static/media/all-products-banner.jpg": "/KINOVA-TECH/static/media/all-products-banner.30d5884382b08932b5d9.jpg",
+    "static/media/headset-banner.png": "/KINOVA-TECH/static/media/headset-banner.81c10327134d10cf7f7a.png",
+    "static/media/mouse-gamer-banner.png": "/KINOVA-TECH/static/media/mouse-gamer-banner.9098ac548484703cae62.png",
     "static/media/logo-msi.png": "/KINOVA-TECH/static/media/logo-msi.dd2293ad8e1e629ba973.png",
+    "static/media/cart-banner-v7.jpg": "/KINOVA-TECH/static/media/cart-banner-v7.80d037036a728e400475.jpg",
+    "static/media/empty-cart-removebg.png": "/KINOVA-TECH/static/media/empty-cart-removebg.f5730b6841a4d1b2b9b2.png",
+    "static/media/empty-saved-products-nobackground.png": "/KINOVA-TECH/static/media/empty-saved-products-nobackground.049ad2314b9c475a301c.png",
+    "static/media/banner-saved-products-v3.jpg": "/KINOVA-TECH/static/media/banner-saved-products-v3.cb7baf6c695c488731c9.jpg",
     "static/media/click-mecanico-dragon-v2-fix.jpg": "/KINOVA-TECH/static/media/click-mecanico-dragon-v2-fix.b43c1356a149b9f56b87.jpg",
     "static/media/logo-kinova-letras-blanco.png": "/KINOVA-TECH/static/media/logo-kinova-letras-blanco.35b537ef8e141d1daf9e.png",
     "static/media/logo_rog.png": "/KINOVA-TECH/static/media/logo_rog.88734d97f5c7a01fb162.png",
@@ -18,10 +25,10 @@
     "static/media/logo-corsair.png": "/KINOVA-TECH/static/media/logo-corsair.cfc20d2b0a24d835c6b6.png",
     "index.html": "/KINOVA-TECH/index.html",
     "main.58462fbc.css.map": "/KINOVA-TECH/static/css/main.58462fbc.css.map",
-    "main.b7549425.js.map": "/KINOVA-TECH/static/js/main.b7549425.js.map"
+    "main.b495ac82.js.map": "/KINOVA-TECH/static/js/main.b495ac82.js.map"
   },
   "entrypoints": [
     "static/css/main.58462fbc.css",
-    "static/js/main.b7549425.js"
+    "static/js/main.b495ac82.js"
   ]
 }
