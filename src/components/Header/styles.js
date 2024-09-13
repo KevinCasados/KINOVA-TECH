@@ -9,8 +9,8 @@ export const HeaderContainer = styled.header`
   margin: 0 auto;
   padding: 25px 2.5rem;
   box-sizing: border-box;
-  background-color: ${({ isAtTop, show }) =>
-    isAtTop ? "transparent" : show ? "rgba(0, 0, 0, 0.7)" : "transparent"};
+  background-color: ${({ topBackgroundColor, backgroundColor, isAtTop, show }) =>
+    isAtTop ? topBackgroundColor || "transparent" : show ? backgroundColor || "rgba(0, 0, 0, 0.7)" : "transparent"};
   top: ${({ show }) => (show ? "0" : "-100px")};
   transition: top 0.5s ease-in-out, background-color 0.5s ease-in-out;
   z-index: 1000; 
@@ -134,5 +134,47 @@ export const IconsContainer = styled.div`
 
   @media (max-width: 620px) {
     gap: 12px;
+  }
+`;
+
+export const CartIconWrapper = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & svg {
+    font-size: 1.5rem;
+    color: #f0f0f0;
+  }
+
+  @media (max-width: 620px) {
+    & svg {
+      font-size: 1.3rem;
+    }
+  }
+`;
+
+export const CartCountIndicator = styled.span`
+  position: absolute;
+  top: -11px;
+  right: -10px;
+  background-color: #00B8FC;
+  color: #000;
+  border-radius: 50%;
+  width: 20px;  /* Ancho fijo */
+  height: 20px; /* Altura fija */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Asegura que el texto esté centrado */
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+
+  @media (max-width: 620px) {
+    width: 18px;
+    height: 18px;
+    font-size: 0.7rem;
   }
 `;
