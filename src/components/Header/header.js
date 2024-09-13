@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import ScrollReveal from "scrollreveal";
 import LogoKinovaWhite from "../../assets/logo-kinova-letras-blanco.png";
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
+import { useSelector } from 'react-redux'; // Importar useSelector para acceder al estado de Redux
 import {
   CenterContainer,
   HeaderContainer,
@@ -10,6 +11,8 @@ import {
   LogoKinova,
   MenuIcon,
   RightContainer,
+  CartIconWrapper,
+  CartCountIndicator,
 } from "./styles";
 import { SlMenu } from "react-icons/sl";
 import { BsCart3 } from "react-icons/bs";
@@ -17,11 +20,14 @@ import { TbHeart } from "react-icons/tb";
 import { LuUser2 } from "react-icons/lu";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ backgroundColor, textColor, topBackgroundColor }) => {
   const [showHeader, setShowHeader] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isAtTop, setIsAtTop] = useState(true);
   const [menuVisible, setMenuVisible] = useState(false);
+  
+  // Obtener la cantidad de productos en el carrito desde el estado global
+  const cartProductsCount = useSelector((state) => state.products.cart.length);
 
   const toggleMenu = () => {
     setMenuVisible(prevVisible => !prevVisible);
@@ -65,27 +71,31 @@ const Header = () => {
 
   return (
     <>
-      <HeaderContainer show={showHeader} isAtTop={isAtTop}>
+      <HeaderContainer show={showHeader} isAtTop={isAtTop} backgroundColor={backgroundColor} topBackgroundColor={topBackgroundColor}>
         <LeftContainer className="left-container">
           <MenuIcon onClick={toggleMenu}>
-            <SlMenu />
+            <SlMenu style={{ color: textColor }} />
           </MenuIcon>
         </LeftContainer>
-          <Link to="/">
-            <CenterContainer>   
-              <LogoKinova src={LogoKinovaWhite} className="logo-kinova" />
-            </CenterContainer>
-          </Link>
+        <Link to="/">
+          <CenterContainer>
+            <LogoKinova src={LogoKinovaWhite} className="logo-kinova" />
+          </CenterContainer>
+        </Link>
         <RightContainer className="right-container">
           <IconsContainer>
             <Link to="/login">
-              <LuUser2 />
+              <LuUser2 style={{ color: textColor }} />
             </Link>
             <Link to="/savedproducts">
-              <TbHeart />
+              <TbHeart style={{ color: textColor }} />
             </Link>
             <Link to="/cart">
-              <BsCart3 />
+              <CartIconWrapper>
+                <BsCart3 style={{ color: textColor }} />
+                {/* Mostrar el indicador solo si hay productos en el carrito */}
+                {cartProductsCount > 0 && <CartCountIndicator>{cartProductsCount}</CartCountIndicator>}
+              </CartIconWrapper>
             </Link>
           </IconsContainer>
         </RightContainer>
@@ -96,3 +106,11 @@ const Header = () => {
 };
 
 export default Header;
+
+export {
+  HeaderContainer,
+  LeftContainer,
+  CenterContainer,
+  RightContainer,
+  LogoKinova,
+};

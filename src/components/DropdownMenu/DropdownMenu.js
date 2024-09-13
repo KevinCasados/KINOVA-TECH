@@ -12,13 +12,13 @@ import {
   FaCog,
   FaArrowLeft,
   FaShoppingCart,
-  FaBookmark,
   FaHeadset,
   FaDownload,
   FaShippingFast,
   FaMouse,
   FaKeyboard,
   FaHeadphones,
+  FaHeart,
 } from "react-icons/fa";
 import { AiFillAppstore, AiFillProduct } from "react-icons/ai";
 
@@ -114,7 +114,7 @@ const DropdownMenu = ({ isVisible, onClose }) => {
           </DropdownItem>
           <DropdownItem>
             <Link to="/savedproducts">
-              <FaBookmark style={{ marginRight: "10px" }} />
+              <FaHeart style={{ marginRight: "10px" }} />
               Saved Products
             </Link>
           </DropdownItem>
@@ -175,25 +175,25 @@ const DropdownMenu = ({ isVisible, onClose }) => {
             <FaArrowLeft /> Back
           </BackButton>
           <DropdownItem>
-              <Link to="/downloads">
+              <Link to="/">
                 <FaDownload style={{ marginRight: "10px" }} />
                 Downloads
               </Link>
           </DropdownItem>
           <DropdownItem>
-              <Link to="/customer-support">
+              <Link to="/">
                 <FaHeadset style={{ marginRight: "10px" }} />
                 Customer Support
               </Link>
           </DropdownItem>
           <DropdownItem>
-              <Link to="/warranty">
+              <Link to="/">
                 <FaCog style={{ marginRight: "10px" }} />
                 Warranty
               </Link>
           </DropdownItem>
           <DropdownItem>
-              <Link to="/shipping-returns">
+              <Link to="/">
                 <FaShippingFast style={{ marginRight: "10px" }} />
                 Shipping/Returns
               </Link>

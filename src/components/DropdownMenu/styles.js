@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const DropdownContainer = styled.div`
   position: fixed;
   top: 93px;
-  left: ${({ isVisible }) => (isVisible ? "0" : "-300px")};
+  left: ${({ isVisible }) => (isVisible ? "0" : "-400px")};
   width: 300px;
   background-color: #242526;
   transition: all 0.3s ease-in-out;

@@ -29,7 +29,7 @@ const Footer = () => {
               <a href="#"><FaFacebookF /></a>
               <a href="#"><FaInstagram /></a>
               <a href="#"><FaYoutube /></a>
-              <a href="#"><FaGithub /></a>
+              <a href="https://github.com/KevinCasados" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
               <a href="#"><FaTwitch /></a>
             </SocialIcons>
           </SubscribeSection>
