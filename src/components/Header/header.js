@@ -79,32 +79,37 @@ const Header = ({ backgroundColor, textColor, topBackgroundColor }) => {
     <>
       <HeaderContainer show={showHeader} isAtTop={isAtTop} backgroundColor={backgroundColor} topBackgroundColor={topBackgroundColor}>
         <LeftContainer className="left-container">
-          <MenuIcon onClick={toggleMenu}>
+          <MenuIcon onClick={toggleMenu} data-testid="menu-icon">
             <SlMenu style={{ color: textColor }} />
           </MenuIcon>
         </LeftContainer>
-        <Link to="/">
+        <Link to="/" data-testid="logo-link">
           <CenterContainer>
-            <LogoKinova src={LogoKinovaWhite} className="logo-kinova" />
+            <LogoKinova
+              src={LogoKinovaWhite}
+              className="logo-kinova"
+              alt="Kinova Logo"
+              data-testid="logo"
+            />
           </CenterContainer>
         </Link>
         <RightContainer className="right-container">
           <IconsContainer>
-            <Link to="/login">
+            <Link to="/login" data-testid="login-icon">
               <LuUser2 style={{ color: textColor }} />
             </Link>
-            <Link to="/savedproducts">
+            <Link to="/savedproducts" data-testid="saved-products-icon">
               <SavedProductsIconWrapper>
                 <TbHeart style={{ color: textColor }} />
                 {/* Mostrar el indicador solo si hay productos guardados */}
-                {savedProductsCount > 0 && <CartCountIndicator>{savedProductsCount}</CartCountIndicator>}
+                {savedProductsCount > 0 && <CartCountIndicator data-testid="saved-products-count">{savedProductsCount}</CartCountIndicator>}
               </SavedProductsIconWrapper>
             </Link>
-            <Link to="/cart">
+            <Link to="/cart" data-testid="cart-icon">
               <CartIconWrapper>
                 <BsCart3 style={{ color: textColor }} />
                 {/* Mostrar el indicador con el total de productos en el carrito */}
-                {totalCartProductsCount > 0 && <CartCountIndicator>{totalCartProductsCount}</CartCountIndicator>}
+                {totalCartProductsCount > 0 && <CartCountIndicator data-testid="cart-count">{totalCartProductsCount}</CartCountIndicator>}
               </CartIconWrapper>
             </Link>
           </IconsContainer>
