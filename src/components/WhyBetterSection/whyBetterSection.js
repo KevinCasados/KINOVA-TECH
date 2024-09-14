@@ -41,14 +41,14 @@ const WhyBetterSection = () => {
         <BackgroundImageContainer className="background-image" /> {/* Contenedor de la imagen */}
         <TextGroupContainer>
           <TextGroup className="text-group">
-            <Icon><FaBolt /></Icon>
+            <Icon data-testid="icon-bolt"><FaBolt /></Icon>
             <FeatureTitle>High Responsiveness</FeatureTitle>
             <FeatureDescription>
               Mechanical switches offer superior response times and performance, making them ideal for gaming and typing.
             </FeatureDescription>
           </TextGroup>
           <TextGroup className="text-group">
-            <Icon><FaCogs /></Icon>
+            <Icon data-testid="icon-cogs"><FaCogs /></Icon>
             <FeatureTitle>Durability</FeatureTitle>
             <FeatureDescription>
               Mechanical switches are built to last, often outliving other keyboard components with a lifespan of up to 50 million keystrokes.
@@ -58,14 +58,14 @@ const WhyBetterSection = () => {
         
         <TextGroupContainer>
           <TextGroup className="text-group">
-            <Icon><FaHandsHelping /></Icon>  
+            <Icon data-testid="icon-hands-helping"><FaHandsHelping /></Icon> 
             <FeatureTitle>Tactile Feedback</FeatureTitle>
             <FeatureDescription>
               Each press of a mechanical switch provides a satisfying tactile and auditory feedback that enhances the typing experience.
             </FeatureDescription>
           </TextGroup>
           <TextGroup className="text-group">
-            <Icon><FaSlidersH /></Icon>
+            <Icon Icon data-testid="icon-sliders-h"><FaSlidersH /></Icon>
             <FeatureTitle>Customizability</FeatureTitle>
             <FeatureDescription>
               Mechanical switches come in various types with different actuation forces and travel distances, allowing for personalized typing experiences.

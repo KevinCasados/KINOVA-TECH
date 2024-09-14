@@ -51,9 +51,7 @@ export const MenuIcon = styled.div`
     }
   }
 
-  &:hover {
-    background-color: rgba(128, 128, 128, 0.3); 
-  }
+  
 
   @media (max-width: 920px) {
     width: 134px;
