@@ -85,20 +85,6 @@
             }
           },
           {
-            "id": 7,
-            "name": "Logitech G413 SE mechanical gaming keyboard",
-            "category": "Keyboards",
-            "price": 1899,
-            "image": "/assets/products/keyboards/keyborard-G413.png",
-            "description": "Affordable gaming keyboard with backlighting for an immersive experience.",
-            "details": "The G413 SE keyboard delivers the performance and durability required in a competitive environment, from tactile mechanical switches to a 6-key rollover with anti-ghosting and PBT keycaps.",
-            "features": {
-              "lighting": ["Backlighting", "Key lighting"],
-              "connectivity": ["With cable"],
-              "series": "G"
-            }
-          },
-          {
             "id": 8,
             "name": "G413 TKL SE Mechanical Gaming Keyboard",
             "category": "Keyboards",

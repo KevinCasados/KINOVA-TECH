@@ -2,11 +2,12 @@ import styled from 'styled-components';
 
 export const BuyOptionsContainer = styled.div`
   padding: 20px;
+  padding-bottom: 80px;
   background-color: #000;
   color: #fff;
   position: relative;
   max-width: 100%;
-  overflow: hidden; /* Ocultar los productos que están fuera de vista */
+  overflow: hidden;
 `;
 
 export const Title = styled.h2`
@@ -22,23 +23,33 @@ export const CarouselWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden; /* Ocultar los productos que están fuera de vista */
+  overflow: hidden;
   width: 100%;
   position: relative;
 `;
 
 export const ProductsGrid = styled.div`
   display: flex;
-  transition: transform 0.5s ease-in-out; /* Animación de transición */
-  width: ${({ totalPages }) => totalPages * 100}%; /* Ancho total basado en el número de páginas */
+  transition: transform 0.5s ease-in-out;
+  width: ${({ totalPages }) => totalPages * 100}%;
 `;
 
 export const ProductCard = styled.div`
-  flex: 0 0 calc(33.33% - 20px); /* Cada producto ocupa un tercio del ancho */
+  flex: 0 0 calc(33.33% - 20px);
   max-width: calc(33.33% - 20px);
-  min-width: calc(33.33% - 20px); /* Aseguramos que cada producto ocupe siempre un tercio del espacio */
+  min-width: calc(33.33% - 20px);
   padding: 10px;
-  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño */
+  box-sizing: border-box;
+
+  @media (max-width: 1200px) {
+    flex: 0 0 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+
+  @media (max-width: 720px) {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 `;
 
 export const ArrowLeft = styled.div`
@@ -50,6 +61,10 @@ export const ArrowLeft = styled.div`
   top: 50%;
   transform: translateY(-50%);
   z-index: 1;
+
+  @media (max-width: 1875px) {
+    display: none; /* Ocultar en pantallas menores a 1875px */
+  }
 `;
 
 export const ArrowRight = styled.div`
@@ -61,6 +76,10 @@ export const ArrowRight = styled.div`
   top: 50%;
   transform: translateY(-50%);
   z-index: 1;
+
+  @media (max-width: 1875px) {
+    display: none; /* Ocultar en pantallas menores a 1875px */
+  }
 `;
 
 export const DotWrapper = styled.div`
@@ -70,8 +89,8 @@ export const DotWrapper = styled.div`
 `;
 
 export const Dot = styled.div`
-  height: 10px;
-  width: 10px;
+  height: 15px; /* Aumentar el tamaño de los puntos */
+  width: 15px;
   background-color: ${({ active }) => (active ? '#fff' : '#888')};
   border-radius: 50%;
   margin: 0 5px;
