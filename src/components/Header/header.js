@@ -13,6 +13,7 @@ import {
   RightContainer,
   CartIconWrapper,
   CartCountIndicator,
+  SavedProductsIconWrapper, // Añadimos el wrapper para el ícono de corazón
 } from "./styles";
 import { SlMenu } from "react-icons/sl";
 import { BsCart3 } from "react-icons/bs";
@@ -26,8 +27,13 @@ const Header = ({ backgroundColor, textColor, topBackgroundColor }) => {
   const [isAtTop, setIsAtTop] = useState(true);
   const [menuVisible, setMenuVisible] = useState(false);
   
-  // Obtener la cantidad de productos en el carrito desde el estado global
-  const cartProductsCount = useSelector((state) => state.products.cart.length);
+  // Obtener la cantidad total de productos en el carrito (incluidos los repetidos)
+  const totalCartProductsCount = useSelector((state) =>
+    state.products.cart.reduce((total, product) => total + product.quantity, 0)
+  );
+
+  // Obtener la cantidad de productos guardados (savedProducts)
+  const savedProductsCount = useSelector((state) => state.products.savedProducts.length);
 
   const toggleMenu = () => {
     setMenuVisible(prevVisible => !prevVisible);
@@ -88,13 +94,17 @@ const Header = ({ backgroundColor, textColor, topBackgroundColor }) => {
               <LuUser2 style={{ color: textColor }} />
             </Link>
             <Link to="/savedproducts">
-              <TbHeart style={{ color: textColor }} />
+              <SavedProductsIconWrapper>
+                <TbHeart style={{ color: textColor }} />
+                {/* Mostrar el indicador solo si hay productos guardados */}
+                {savedProductsCount > 0 && <CartCountIndicator>{savedProductsCount}</CartCountIndicator>}
+              </SavedProductsIconWrapper>
             </Link>
             <Link to="/cart">
               <CartIconWrapper>
                 <BsCart3 style={{ color: textColor }} />
-                {/* Mostrar el indicador solo si hay productos en el carrito */}
-                {cartProductsCount > 0 && <CartCountIndicator>{cartProductsCount}</CartCountIndicator>}
+                {/* Mostrar el indicador con el total de productos en el carrito */}
+                {totalCartProductsCount > 0 && <CartCountIndicator>{totalCartProductsCount}</CartCountIndicator>}
               </CartIconWrapper>
             </Link>
           </IconsContainer>
@@ -106,11 +116,3 @@ const Header = ({ backgroundColor, textColor, topBackgroundColor }) => {
 };
 
 export default Header;
-
-export {
-  HeaderContainer,
-  LeftContainer,
-  CenterContainer,
-  RightContainer,
-  LogoKinova,
-};

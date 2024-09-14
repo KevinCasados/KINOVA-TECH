@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import {
@@ -21,21 +21,25 @@ import {
   ProductPriceOptions
 } from './styles';
 
-const BuyOptions = () => {
-  const products = useSelector((state) => state.products.products); // Seleccionamos los productos
+const BuyOptions = ({ title = "You May Also Like" }) => {
+  const products = useSelector((state) => state.products.products);
   const [randomizedProducts, setRandomizedProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
-  const itemsPerPage = 3; // Mostramos 3 productos por página
+  const itemsPerPage = 3; 
+  const maxPages = 3; // Definimos el máximo de 3 páginas
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
 
   useEffect(() => {
     if (products && products.length > 0) {
-      // Aleatorizamos los productos
       const shuffledProducts = [...products].sort(() => 0.5 - Math.random());
       setRandomizedProducts(shuffledProducts);
     }
   }, [products]);
 
-  const totalPages = Math.ceil(randomizedProducts.length / itemsPerPage);
+  // Calculamos el total de páginas basado en el número de productos y limitamos a 3 páginas
+  const totalPages = Math.min(Math.ceil(randomizedProducts.length / itemsPerPage), maxPages);
 
   const handleNextPage = () => {
     setCurrentPage((prevPage) => (prevPage + 1) % totalPages);
@@ -45,7 +49,27 @@ const BuyOptions = () => {
     setCurrentPage((prevPage) => (prevPage - 1 + totalPages) % totalPages);
   };
 
-  // Obtener los productos para la página actual
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX.current - touchEndX.current > 50) {
+      handleNextPage(); // Desliza a la izquierda
+    }
+    if (touchStartX.current - touchEndX.current < -50) {
+      handlePreviousPage(); // Desliza a la derecha
+    }
+  };
+
+  useEffect(() => {
+    setIsTouchDevice('ontouchstart' in window || navigator.maxTouchPoints > 0);
+  }, []);
+
   const paginatedProducts = randomizedProducts.slice(
     currentPage * itemsPerPage,
     currentPage * itemsPerPage + itemsPerPage
@@ -53,9 +77,18 @@ const BuyOptions = () => {
 
   return (
     <BuyOptionsContainer>
-      <Title>You May Also Like</Title>
-      <CarouselWrapper>
-        <ArrowLeft onClick={handlePreviousPage}>{'<'}</ArrowLeft>
+      <Title>{title}</Title>
+      <CarouselWrapper
+        onTouchStart={isTouchDevice ? handleTouchStart : null}
+        onTouchMove={isTouchDevice ? handleTouchMove : null}
+        onTouchEnd={isTouchDevice ? handleTouchEnd : null}
+      >
+        {window.innerWidth > 1875 && (
+          <>
+            <ArrowLeft onClick={handlePreviousPage}>{'<'}</ArrowLeft>
+            <ArrowRight onClick={handleNextPage}>{'>'}</ArrowRight>
+          </>
+        )}
         <ProductsGrid>
           {paginatedProducts.map((product) => (
             <ProductCard key={product.id}>
@@ -71,7 +104,6 @@ const BuyOptions = () => {
             </ProductCard>
           ))}
         </ProductsGrid>
-        <ArrowRight onClick={handleNextPage}>{'>'}</ArrowRight>
       </CarouselWrapper>
       <DotWrapper>
         {Array.from({ length: totalPages }).map((_, index) => (

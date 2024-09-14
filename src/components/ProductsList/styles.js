@@ -129,6 +129,13 @@ export const IconsWrapper = styled.div`
     opacity: 1;  /* Los íconos se muestran cuando el mouse está sobre la imagen o los íconos */
     right: 10px;  /* Mueve los íconos hacia adentro al hacer hover */
   }
+
+  /* Mantener los íconos siempre visibles en pantallas pequeñas */
+  @media (max-width: 720px) {
+    right: 10px;  /* Los íconos estarán siempre visibles */
+    opacity: 1;   /* Mantener opacidad completa */
+    pointer-events: auto;  /* Asegura la interacción */
+  }
 `;
 
 export const IconOverlay = styled.div`

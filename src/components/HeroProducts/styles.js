@@ -5,7 +5,7 @@ export const HeroContainer = styled.section`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  height: 60vh;
+  height: 700px;
   background-image: url(${props => props.backgroundImage});
   background-size: cover;
   background-position: center;

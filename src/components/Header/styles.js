@@ -25,22 +25,14 @@ export const LeftContainer = styled.article`
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  padding-right: 6.125rem;
-
-  @media (max-width: 920px) {
-    padding-right: 6.225rem;
-  }
-
-  @media (max-width: 620px) {
-    padding-right: 5.225rem;
-  }
 `;
 
 export const MenuIcon = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 40px;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  width: 170px;
   height: 40px;
   border-radius: 50%;
   transition: background-color 0.3s ease-in-out;
@@ -63,9 +55,12 @@ export const MenuIcon = styled.div`
     background-color: rgba(128, 128, 128, 0.3); 
   }
 
+  @media (max-width: 920px) {
+    width: 134px;
+  }
+
   @media (max-width: 620px) {
-    width: 30px;
-    height: 30px;
+    width: 94px;
   }
 `;
 
@@ -98,6 +93,7 @@ export const RightContainer = styled.article`
 export const IconsContainer = styled.div`
   display: flex;
   gap: 25px;
+  box-sizing: border-box;
 
   & a {
     display: flex;
@@ -176,5 +172,23 @@ export const CartCountIndicator = styled.span`
     width: 18px;
     height: 18px;
     font-size: 0.7rem;
+  }
+`;
+
+export const SavedProductsIconWrapper = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & svg {
+    font-size: 1.5rem;
+    color: #f0f0f0;
+  }
+
+  @media (max-width: 620px) {
+    & svg {
+      font-size: 1.3rem;
+    }
   }
 `;

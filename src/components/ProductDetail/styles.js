@@ -26,6 +26,10 @@ export const ProductImageContainer = styled.div`
   position: relative;
   cursor: ${({ isZoomed }) => (isZoomed ? 'zoom-out' : 'zoom-in')};  /* Cambia el cursor cuando está en zoom */
 
+  @media (max-width: 720px) {
+    cursor: default;  /* Desactiva el cursor de zoom en pantallas pequeñas */
+  }
+
   @media (max-width: 1160px) {
     max-width: 100%;
   }
