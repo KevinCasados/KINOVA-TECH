@@ -8,7 +8,7 @@ import {
   Icon,
   SectionTitle,
   SectionTitleText,
-  BackgroundImageContainer // Importa el nuevo estilo para el contenedor de la imagen
+  BackgroundImageContainer
 } from "./styles";
 import { FaBolt, FaCogs, FaHandsHelping, FaSlidersH } from "react-icons/fa";
 import ScrollReveal from "scrollreveal";
@@ -23,10 +23,7 @@ const WhyBetterSection = () => {
             reset: false,
         });
 
-        // Revelación inicial desde arriba hacia abajo
-        srWhyBetter.reveal(".section-title-text", { origin: "top", delay: 1100 });  
-        
-        // ScrollReveal para la imagen de fondo
+        srWhyBetter.reveal(".section-title-text", { origin: "top", delay: 1100 });
         srWhyBetter.reveal(".background-image", { origin: "top", delay: 1100, duration: 1900 });
         srWhyBetter.reveal(".text-group", { origin: "top", delay: 1100, duration: 1900 });
 
@@ -34,21 +31,21 @@ const WhyBetterSection = () => {
 
   return (
     <>
-      <SectionTitle>
+      <SectionTitle role="heading" aria-level="2">
          <SectionTitleText className="section-title-text">Technology in every click</SectionTitleText>
       </SectionTitle>
-      <WhyBetterContainer>
-        <BackgroundImageContainer className="background-image" /> {/* Contenedor de la imagen */}
+      <WhyBetterContainer aria-label="Why choose our technology" role="region">
+        <BackgroundImageContainer className="background-image" aria-hidden="true" />
         <TextGroupContainer>
-          <TextGroup className="text-group">
-            <Icon data-testid="icon-bolt"><FaBolt /></Icon>
+          <TextGroup className="text-group" role="group" aria-label="High Responsiveness feature">
+            <Icon data-testid="icon-bolt" aria-hidden="true"><FaBolt /></Icon>
             <FeatureTitle>High Responsiveness</FeatureTitle>
             <FeatureDescription>
               Mechanical switches offer superior response times and performance, making them ideal for gaming and typing.
             </FeatureDescription>
           </TextGroup>
-          <TextGroup className="text-group">
-            <Icon data-testid="icon-cogs"><FaCogs /></Icon>
+          <TextGroup className="text-group" role="group" aria-label="Durability feature">
+            <Icon data-testid="icon-cogs" aria-hidden="true"><FaCogs /></Icon>
             <FeatureTitle>Durability</FeatureTitle>
             <FeatureDescription>
               Mechanical switches are built to last, often outliving other keyboard components with a lifespan of up to 50 million keystrokes.
@@ -57,15 +54,15 @@ const WhyBetterSection = () => {
         </TextGroupContainer>
         
         <TextGroupContainer>
-          <TextGroup className="text-group">
-            <Icon data-testid="icon-hands-helping"><FaHandsHelping /></Icon> 
+          <TextGroup className="text-group" role="group" aria-label="Tactile Feedback feature">
+            <Icon data-testid="icon-hands-helping" aria-hidden="true"><FaHandsHelping /></Icon>
             <FeatureTitle>Tactile Feedback</FeatureTitle>
             <FeatureDescription>
               Each press of a mechanical switch provides a satisfying tactile and auditory feedback that enhances the typing experience.
             </FeatureDescription>
           </TextGroup>
-          <TextGroup className="text-group">
-            <Icon Icon data-testid="icon-sliders-h"><FaSlidersH /></Icon>
+          <TextGroup className="text-group" role="group" aria-label="Customizability feature">
+            <Icon data-testid="icon-sliders-h" aria-hidden="true"><FaSlidersH /></Icon>
             <FeatureTitle>Customizability</FeatureTitle>
             <FeatureDescription>
               Mechanical switches come in various types with different actuation forces and travel distances, allowing for personalized typing experiences.

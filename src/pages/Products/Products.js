@@ -6,31 +6,31 @@ import HeroProductsImage from '../../assets/all-products-banner.jpg';
 import ProductsList from '../../components/ProductsList/productsList';
 import { PageContainer } from './styles';
 
-
 const Products = () => {
   return (
     <>
-      <PageContainer>
+      <PageContainer role="main" aria-label="All Products page">
         <Header />
         <HeroProducts 
           title="ALL PRODUCTS"
           subtitle="Variety. Innovation. Quality. Kinova products are designed to meet the highest standards of performance and durability. Explore our full range of cutting-edge technology and find the perfect solution for your needs"
           backgroundImage={HeroProductsImage}
-          overlayColor="rgba(0, 0, 0, 0.5)" // Cambia la opacidad o el color
+          overlayColor="rgba(0, 0, 0, 0.5)" 
         />
         <ProductsList
-        categoryFilter="All"
-        availableFilters={['platform', 'series', 'feeding', 'lighting', 'connectivity', 'sensorType']}
-        availableFeatureValues={{
-          lighting: ['LIGHTSYNC RGB', 'Backlighting', 'Key lighting'],
-          connectivity: ['Bluetooth', 'LIGHTSPEED', 'Power supply', 'With cable', ],
-          sensorType: ['Optical sensor', 'Sensor HERO', 'Laser sensor'],
-          series: ['PRO', 'G', 'Astro', 'Aurora']
+          categoryFilter="All"
+          availableFilters={['platform', 'series', 'feeding', 'lighting', 'connectivity', 'sensorType']}
+          availableFeatureValues={{
+            lighting: ['LIGHTSYNC RGB', 'Backlighting', 'Key lighting'],
+            connectivity: ['Bluetooth', 'LIGHTSPEED', 'Power supply', 'With cable'],
+            sensorType: ['Optical sensor', 'Sensor HERO', 'Laser sensor'],
+            series: ['PRO', 'G', 'Astro', 'Aurora']
           }}
+          aria-label="Product list of all Kinova products with available filters and features"
         />
         <Footer />
       </PageContainer>
-    </> 
+    </>
   );
 };
 

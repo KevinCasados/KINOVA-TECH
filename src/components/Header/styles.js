@@ -34,7 +34,6 @@ export const MenuIcon = styled.div`
   box-sizing: border-box;
   width: 170px;
   height: 40px;
-  border-radius: 50%;
   transition: background-color 0.3s ease-in-out;
 
   & svg {

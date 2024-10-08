@@ -176,10 +176,10 @@ const ProductsList = ({ categoryFilter = 'All', availableFilters = [], available
         </SortContainer>
       </MainSortContainer>
 
-      <ProductsContainer>
+      <ProductsContainer role="region" aria-label="Product list with available filters">
         {/* Filtros */}
         {showFilters && (
-        <FiltersContainer>
+        <FiltersContainer role="complementary" aria-label="Filter options">
           {availableFilters.includes('lighting') && (
             <FilterSection>
               <FilterTitle>
@@ -196,6 +196,7 @@ const ProductsList = ({ categoryFilter = 'All', availableFilters = [], available
                     type="checkbox"
                     value={value}
                     onChange={(e) => handleFilterChange('lighting', e.target.value)}
+                    aria-label={`Filter by ${value}`}
                   />
                   {value}
                 </CheckboxLabel>
@@ -220,6 +221,7 @@ const ProductsList = ({ categoryFilter = 'All', availableFilters = [], available
                     type="checkbox"
                     value={value}
                     onChange={(e) => handleFilterChange('connectivity', e.target.value)}
+                    aria-label={`Filter by ${value}`}
                   />
                   {value}
                 </CheckboxLabel>
@@ -244,6 +246,7 @@ const ProductsList = ({ categoryFilter = 'All', availableFilters = [], available
                     type="checkbox"
                     value={value}
                     onChange={(e) => handleFilterChange('series', e.target.value)}
+                    aria-label={`Filter by ${value}`}
                   />
                   {value}
                 </CheckboxLabel>
@@ -268,6 +271,7 @@ const ProductsList = ({ categoryFilter = 'All', availableFilters = [], available
                     type="checkbox"
                     value={value}
                     onChange={(e) => handleFilterChange('feeding', e.target.value)}
+                    aria-label={`Filter by ${value}`}
                   />
                   {value}
                 </CheckboxLabel>
@@ -292,6 +296,7 @@ const ProductsList = ({ categoryFilter = 'All', availableFilters = [], available
                     type="checkbox"
                     value={value}
                     onChange={(e) => handleFilterChange('sensorType', e.target.value)}
+                    aria-label={`Filter by ${value}`}
                   />
                   {value}
                 </CheckboxLabel>
@@ -316,6 +321,7 @@ const ProductsList = ({ categoryFilter = 'All', availableFilters = [], available
                     type="checkbox"
                     value={value}
                     onChange={(e) => handleFilterChange('platform', e.target.value)}
+                    aria-label={`Filter by ${value}`}
                   />
                   {value}
                 </CheckboxLabel>
@@ -328,9 +334,9 @@ const ProductsList = ({ categoryFilter = 'All', availableFilters = [], available
         )} 
 
         {/* Lista de productos */}
-        <ProductsGrid>
+        <ProductsGrid role="list" aria-label="Filtered product list">
           {filteredProducts.map((product) => (
-            <ProductCard key={product.id}>
+            <ProductCard key={product.id} role="listitem" aria-label={`Product: ${product.name}`}>
             {/* Wrapper around the image and icons */}
             <ProductImageWrapper>
               <Link to={`/products/${product.id}`}>
@@ -347,7 +353,7 @@ const ProductsList = ({ categoryFilter = 'All', availableFilters = [], available
               <h2>{product.name}</h2>
               <p>{product.description}</p>
               <ProductPrice>{formatPrice(product.price)}</ProductPrice>
-              <AddToCartButton onClick={() => handleAddToCart(product)}>
+              <AddToCartButton onClick={() => handleAddToCart(product)} aria-label={`Add ${product.name} to cart`}>
                 <CartIcon />
                 ADD TO CART
               </AddToCartButton>
@@ -374,7 +380,7 @@ const HeartIconToggle = ({ product }) => {
   };
 
   return (
-    <div onClick={toggleLike} style={{ cursor: 'pointer' }}>
+    <div onClick={toggleLike} style={{ cursor: 'pointer' }} aria-label={isLiked ? `Remove ${product.name} from saved` : `Save ${product.name}`}>
       {isLiked ? <FaHeart size={24} color="#009AFC" /> : <FiHeart size={24} color="#009AFC" />}
     </div>
   );

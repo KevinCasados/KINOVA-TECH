@@ -16,10 +16,12 @@ const ProductDetailsPage = () => {
 
   return (
     <>
-      <Header topBackgroundColor="#000" backgroundColor="#000" />
-      <ProductDetails />
-      <BuyOptions /> {/* Asegúrate de renderizar BuyOptions */}
-      <Footer />
+      <Header topBackgroundColor="#000" backgroundColor="#000" aria-label="Main navigation" />
+      <main role="main" aria-label="Product details page">
+        <ProductDetails aria-label="Detailed view of the selected product" />
+        <BuyOptions aria-label="Recommended products based on your selection" /> {/* Asegúrate de renderizar BuyOptions */}
+      </main>
+      <Footer aria-label="Footer with additional navigation links and company information" />
     </>
   );
 };

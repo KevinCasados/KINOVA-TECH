@@ -53,28 +53,48 @@ const Carousel = () => {
   }, []);
 
   return (
-    <CarouselContainer>
+    <CarouselContainer role="region" aria-label="Image Carousel">
       {slides.map((slide, index) => (
-        <CarouselSlide key={index} backgroundImage={slide.backgroundImage} active={index === currentSlide}>
+        <CarouselSlide 
+          key={index} 
+          backgroundImage={slide.backgroundImage} 
+          active={index === currentSlide}
+          aria-hidden={index !== currentSlide} // Esconder las diapositivas no activas de lectores de pantalla
+        >
           <CarouselContent>
             <CarouselTitle>{slide.title}</CarouselTitle>
             <CarouselSubtitle>{slide.subtitle}</CarouselSubtitle>
-            <Link to={slide.buttonLink}>
+            <Link to={slide.buttonLink} aria-label={`Navigate to ${slide.buttonText}`}>
               <CarouselButton>{slide.buttonText}</CarouselButton>
             </Link>
           </CarouselContent>
         </CarouselSlide>
       ))}
       <CarouselNav>
-        <NavButton onClick={prevSlide}>&lt;</NavButton>
-        <NavButton onClick={nextSlide}>&gt;</NavButton>
+        <NavButton 
+          onClick={prevSlide} 
+          aria-label="Previous Slide" 
+          role="button"
+        >
+          &lt;
+        </NavButton>
+        <NavButton 
+          onClick={nextSlide} 
+          aria-label="Next Slide" 
+          role="button"
+        >
+          &gt;
+        </NavButton>
       </CarouselNav>
-      <IndicatorsContainer>
+      <IndicatorsContainer role="tablist" aria-label="Slide Navigation">
         {slides.map((_, index) => (
           <Indicator 
             key={index} 
             active={index === currentSlide} 
             onClick={() => goToSlide(index)} 
+            aria-label={`Go to slide ${index + 1}`}
+            role="tab"
+            aria-selected={index === currentSlide} // Indicar que este es el slide seleccionado
           />
         ))}
       </IndicatorsContainer>

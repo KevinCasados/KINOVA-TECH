@@ -9,14 +9,14 @@ import CartContent from '../../components/CartContent/CartContent';
 const Cart = () => {
   return (
     <>
-      <PageContainer>
+      <PageContainer role="main" aria-label="Shopping Cart Page">
         <Header />
         <HeroProducts 
           title="CART PAGE"
           backgroundImage={HeroCartImage}
-          overlayColor="rgba(0, 0, 0, 0.5)" // Cambia la opacidad o el color
+          overlayColor="rgba(0, 0, 0, 0.5)" 
         />
-        <CartContent />
+        <CartContent aria-label="Items in your shopping cart" />
         <Footer />
       </PageContainer>
     </>
