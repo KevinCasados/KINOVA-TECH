@@ -24,7 +24,7 @@ const ProductDetailComponent = () => {
 
   const [isZoomed, setIsZoomed] = useState(false);
   const [position, setPosition] = useState({ x: 50, y: 50 });  
-  const [canZoom, setCanZoom] = useState(window.innerWidth > 720); // Estado para controlar si el zoom está permitido
+  const [canZoom, setCanZoom] = useState(window.innerWidth > 720);
 
   useEffect(() => {
     if (status === 'idle') {
@@ -34,7 +34,7 @@ const ProductDetailComponent = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setCanZoom(window.innerWidth > 720); // Habilitar/deshabilitar el zoom según el tamaño de la pantalla
+      setCanZoom(window.innerWidth > 720); 
     };
 
     window.addEventListener('resize', handleResize);
@@ -68,18 +68,19 @@ const ProductDetailComponent = () => {
   };
 
   if (status === 'loading') {
-    return <p>Cargando producto...</p>;
+    return <p>Loading product...</p>;
   }
 
   if (!product) {
-    return <p>Producto no encontrado!</p>;
+    return <p>Product not found!</p>;
   }
 
   return (
-    <ProductContainer>
+    <ProductContainer role="region" aria-label="Product details">
       <ProductImageContainer
         onMouseMove={handleMouseMove}
         onClick={handleImageClick}  
+        aria-label="Zoomable product image"
       >
         <ProductImage 
           src={`${process.env.PUBLIC_URL}${product.image}`} 
@@ -88,14 +89,14 @@ const ProductDetailComponent = () => {
           position={position} 
         />
       </ProductImageContainer>
-      <ProductInfo>
-        <ProductSeries>Serie {product.features?.series}</ProductSeries>
-        <ProductTitle>{product.name}</ProductTitle>
+      <ProductInfo aria-labelledby="product-title">
+        <ProductSeries>Series {product.features?.series}</ProductSeries>
+        <ProductTitle id="product-title">{product.name}</ProductTitle>
         <ProductDescription>{product.description}</ProductDescription>
         <ProductPrice>
           {new Intl.NumberFormat('es-MX', { style: 'currency', currency: 'MXN' }).format(product.price)}
         </ProductPrice>
-        <BuyButton onClick={handleAddToCart}>ADD TO CART</BuyButton>
+        <BuyButton onClick={handleAddToCart} aria-label={`Add ${product.name} to cart`}>ADD TO CART</BuyButton>
         <ProductDetails>{product.details}</ProductDetails>
       </ProductInfo>
     </ProductContainer>

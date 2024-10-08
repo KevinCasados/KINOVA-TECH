@@ -82,8 +82,21 @@ const DropdownMenu = ({ isVisible, onClose }) => {
     };
   }, [isVisible, onClose]);
 
+  // Manejar la navegación por teclado
+  const handleKeyDown = (event, action) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      action();
+    }
+  };
+
   return (
-    <DropdownContainer isVisible={isVisible} style={{ height: menuHeight }} className="dropdown-container">
+    <DropdownContainer
+      isVisible={isVisible}
+      style={{ height: menuHeight }}
+      className="dropdown-container"
+      role="menu"
+      aria-label="Dropdown navigation menu"
+    >
       <CSSTransition
         in={activeMenu === "main"}
         unmountOnExit
@@ -92,33 +105,51 @@ const DropdownMenu = ({ isVisible, onClose }) => {
         onEnter={calcHeight}
       >
         <div>
-          <DropdownItem onClick={onClose}>
+          <DropdownItem
+            role="menuitem"
+            tabIndex="0"
+            onClick={onClose}
+            onKeyDown={(e) => handleKeyDown(e, onClose)}
+            aria-label="Close Menu"
+          >
             <FaArrowLeft style={{ marginRight: "10px" }} />
             Close Menu
           </DropdownItem>
-          <DropdownItem>
-            <Link to="/login">
+          <DropdownItem role="menuitem" tabIndex="0">
+            <Link to="/login" aria-label="Go to My Profile">
               <FaUserCircle style={{ marginRight: "10px" }} />
               My Profile
             </Link>
           </DropdownItem>
-          <DropdownItem>
-            <Link to="/cart">
+          <DropdownItem role="menuitem" tabIndex="0">
+            <Link to="/cart" aria-label="Go to Cart">
               <FaShoppingCart style={{ marginRight: "10px" }} />
               Cart
             </Link>
           </DropdownItem>
-          <DropdownItem onClick={() => setActiveMenu("products")}>
+          <DropdownItem
+            role="menuitem"
+            tabIndex="0"
+            onClick={() => setActiveMenu("products")}
+            onKeyDown={(e) => handleKeyDown(e, () => setActiveMenu("products"))}
+            aria-label="Go to Products"
+          >
             <AiFillProduct style={{ marginRight: "10px" }} />
             Products
           </DropdownItem>
-          <DropdownItem>
-            <Link to="/savedproducts">
+          <DropdownItem role="menuitem" tabIndex="0">
+            <Link to="/savedproducts" aria-label="Go to Saved Products">
               <FaHeart style={{ marginRight: "10px" }} />
               Saved Products
             </Link>
           </DropdownItem>
-          <DropdownItem onClick={() => setActiveMenu("support")}>
+          <DropdownItem
+            role="menuitem"
+            tabIndex="0"
+            onClick={() => setActiveMenu("support")}
+            onKeyDown={(e) => handleKeyDown(e, () => setActiveMenu("support"))}
+            aria-label="Go to Support"
+          >
             <FaHeadset style={{ marginRight: "10px" }} />
             Support
           </DropdownItem>
@@ -132,30 +163,36 @@ const DropdownMenu = ({ isVisible, onClose }) => {
         classNames="menu-secondary"
         onEnter={calcHeight}
       >
-        <SecondaryMenu>
-          <BackButton onClick={() => setActiveMenu("main")}>
+        <SecondaryMenu role="menu" aria-label="Product categories">
+          <BackButton
+            role="menuitem"
+            tabIndex="0"
+            onClick={() => setActiveMenu("main")}
+            onKeyDown={(e) => handleKeyDown(e, () => setActiveMenu("main"))}
+            aria-label="Go back to main menu"
+          >
             <FaArrowLeft /> Back
           </BackButton>
-          <DropdownItem>
-            <Link to="/products">
+          <DropdownItem role="menuitem" tabIndex="0">
+            <Link to="/products" aria-label="View all products">
               <AiFillAppstore style={{ marginRight: "10px" }} />
               All
             </Link>
           </DropdownItem>
-          <DropdownItem>
-            <Link to="/products/mouses">
+          <DropdownItem role="menuitem" tabIndex="0">
+            <Link to="/products/mouses" aria-label="View mouse products">
               <FaMouse style={{ marginRight: "10px" }} />
               Mouse
             </Link>
           </DropdownItem>
-          <DropdownItem>
-            <Link to="/products/keyboards">
+          <DropdownItem role="menuitem" tabIndex="0">
+            <Link to="/products/keyboards" aria-label="View keyboard products">
               <FaKeyboard style={{ marginRight: "10px" }} />
               Keyboards
             </Link>
           </DropdownItem>
-          <DropdownItem>
-            <Link to="/products/headphones">
+          <DropdownItem role="menuitem" tabIndex="0">
+            <Link to="/products/headphones" aria-label="View headphone products">
               <FaHeadphones style={{ marginRight: "10px" }} />
               Headphones
             </Link>
@@ -170,33 +207,39 @@ const DropdownMenu = ({ isVisible, onClose }) => {
         classNames="menu-secondary"
         onEnter={calcHeight}
       >
-        <SecondaryMenu>
-          <BackButton onClick={() => setActiveMenu("main")}>
+        <SecondaryMenu role="menu" aria-label="Support options">
+          <BackButton
+            role="menuitem"
+            tabIndex="0"
+            onClick={() => setActiveMenu("main")}
+            onKeyDown={(e) => handleKeyDown(e, () => setActiveMenu("main"))}
+            aria-label="Go back to main menu"
+          >
             <FaArrowLeft /> Back
           </BackButton>
-          <DropdownItem>
-              <Link to="/">
-                <FaDownload style={{ marginRight: "10px" }} />
-                Downloads
-              </Link>
+          <DropdownItem role="menuitem" tabIndex="0">
+            <Link to="/" aria-label="Go to Downloads page">
+              <FaDownload style={{ marginRight: "10px" }} />
+              Downloads
+            </Link>
           </DropdownItem>
-          <DropdownItem>
-              <Link to="/">
-                <FaHeadset style={{ marginRight: "10px" }} />
-                Customer Support
-              </Link>
+          <DropdownItem role="menuitem" tabIndex="0">
+            <Link to="/" aria-label="Go to Customer Support page">
+              <FaHeadset style={{ marginRight: "10px" }} />
+              Customer Support
+            </Link>
           </DropdownItem>
-          <DropdownItem>
-              <Link to="/">
-                <FaCog style={{ marginRight: "10px" }} />
-                Warranty
-              </Link>
+          <DropdownItem role="menuitem" tabIndex="0">
+            <Link to="/" aria-label="Go to Warranty page">
+              <FaCog style={{ marginRight: "10px" }} />
+              Warranty
+            </Link>
           </DropdownItem>
-          <DropdownItem>
-              <Link to="/">
-                <FaShippingFast style={{ marginRight: "10px" }} />
-                Shipping/Returns
-              </Link>
+          <DropdownItem role="menuitem" tabIndex="0">
+            <Link to="/" aria-label="Go to Shipping and Returns page">
+              <FaShippingFast style={{ marginRight: "10px" }} />
+              Shipping/Returns
+            </Link>
           </DropdownItem>
         </SecondaryMenu>
       </CSSTransition>

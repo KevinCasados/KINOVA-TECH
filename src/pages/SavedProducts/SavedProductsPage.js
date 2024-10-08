@@ -9,14 +9,15 @@ import HeroProducts from '../../components/HeroProducts/heroProducts';
 const SavedProductsPage = () => {
   return (
     <>
-      <PageContainer>
+      <PageContainer role="main" aria-label="Saved Products page">
         <Header />
         <HeroProducts 
-          title="SAVED PRODUCTS PAGE"
+          title="SAVED PRODUCTS"
           backgroundImage={HeroProductsImage}
-          overlayColor="rgba(0, 0, 0, 0.5)" // Cambia la opacidad o el color
+          overlayColor="rgba(0, 0, 0, 0.5)" 
+          aria-label="Banner showing saved products"
         />
-        <SavedProductsContent />
+        <SavedProductsContent aria-label="List of saved products" />
         <Footer />
       </PageContainer>
     </>

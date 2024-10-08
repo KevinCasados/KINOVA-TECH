@@ -21,14 +21,22 @@ const Hero = () => {
     }, []);
 
     return(
-        <HeroContainer>
-            <HeroTextContainer>
-                <HeroTitle className="hero-title">INOVATION <br/> IN EVERY PRODUCT</HeroTitle>
-            </HeroTextContainer>
-            <HeroImageContainer>
-                <HeroImage src={HeroImageHeadPhones} className="hero-image" />
-            </HeroImageContainer>
-        </HeroContainer>
+        <section aria-labelledby="hero-title" role="region">
+            <HeroContainer>
+                <HeroTextContainer>
+                    <HeroTitle className="hero-title" id="hero-title">
+                        INNOVATION <br /> IN EVERY PRODUCT
+                    </HeroTitle>
+                </HeroTextContainer>
+                <HeroImageContainer>
+                    <HeroImage 
+                        src={HeroImageHeadPhones} 
+                        className="hero-image" 
+                        alt="Headphones showcasing innovation" 
+                    />
+                </HeroImageContainer>
+            </HeroContainer>
+        </section>
     );
 };
 

@@ -50,45 +50,51 @@ const SavedProductsContent = () => {
         <Line />
       </TitleContainer>
 
-      
-        {savedProducts.length === 0 ? (
-          <EmptyStateContainer>
-            <EmptyImage src={EmpySavedProductsImg} alt="Empty saved products" />
-            <EmptyMessage>Your Saved Products list is currently empty!</EmptyMessage>
-            <p>
-              You haven't saved any products yet. Explore our catalog and save products you like for later.
-            </p>
-            <Link to="/products">
-              <ReturnButton>Return to Shop</ReturnButton>
-            </Link>
-          </EmptyStateContainer>
-        ) : (
-          <ProductsContainer>
-            <ProductsGrid>
-              {savedProducts.map((product) => (
-                <ProductCard key={product.id}>
-                  <ProductImageWrapper>
-                    <Link to={`/products/${product.id}`}>
-                      <ProductImage src={`${process.env.PUBLIC_URL}${product.image}`} alt={product.name} />
-                    </Link>
-                    <IconsWrapper>
-                      <div onClick={() => handleRemoveFromSaved(product.id)} style={{ cursor: 'pointer' }}>
-                        <FaHeart size={24} color="#009AFC" />
-                      </div>
-                    </IconsWrapper>
-                  </ProductImageWrapper>
-                  <ProductInfo>
-                    <h2>{product.name}</h2>
-                    <ProductPrice>{formatPrice(product.price)}</ProductPrice>
-                    <AddToCartButton onClick={() => handleAddToCart(product)}>
-                      ADD TO CART
-                    </AddToCartButton>
-                  </ProductInfo>
-                </ProductCard>
-              ))}
-            </ProductsGrid>
-          </ProductsContainer>
-        )}
+      {savedProducts.length === 0 ? (
+        <EmptyStateContainer role="region" aria-label="No saved products">
+          <EmptyImage src={EmpySavedProductsImg} alt="Empty saved products illustration" />
+          <EmptyMessage>Your Saved Products list is currently empty!</EmptyMessage>
+          <p>
+            You haven't saved any products yet. Explore our catalog and save products you like for later.
+          </p>
+          <Link to="/products">
+            <ReturnButton aria-label="Return to the shop">Return to Shop</ReturnButton>
+          </Link>
+        </EmptyStateContainer>
+      ) : (
+        <ProductsContainer role="region" aria-label="List of saved products">
+          <ProductsGrid>
+            {savedProducts.map((product) => (
+              <ProductCard key={product.id}>
+                <ProductImageWrapper>
+                  <Link to={`/products/${product.id}`} aria-label={`View details of ${product.name}`}>
+                    <ProductImage src={`${process.env.PUBLIC_URL}${product.image}`} alt={product.name} />
+                  </Link>
+                  <IconsWrapper>
+                    <div 
+                      onClick={() => handleRemoveFromSaved(product.id)} 
+                      style={{ cursor: 'pointer' }} 
+                      aria-label={`Remove ${product.name} from saved products`}
+                    >
+                      <FaHeart size={24} color="#009AFC" />
+                    </div>
+                  </IconsWrapper>
+                </ProductImageWrapper>
+                <ProductInfo>
+                  <h2>{product.name}</h2>
+                  <ProductPrice>{formatPrice(product.price)}</ProductPrice>
+                  <AddToCartButton 
+                    onClick={() => handleAddToCart(product)} 
+                    aria-label={`Add ${product.name} to cart`}
+                  >
+                    ADD TO CART
+                  </AddToCartButton>
+                </ProductInfo>
+              </ProductCard>
+            ))}
+          </ProductsGrid>
+        </ProductsContainer>
+      )}
     </>
   );
 };

@@ -25,14 +25,26 @@ const Home = () => {
   return (
     <>
       <Header />
-      <Hero />
-      <NewestSection />
-      <BuyOptions title="Most Popular Products" />
-      <Carousel />
-      <WhyBetterSection />
-      <BrandSlider />
-      <ShippingInfo />
-      <BuyOptions title="Recently Viewed" />
+      <main>
+        <Hero />
+        <section aria-labelledby="newest-products">
+          <h2 id="newest-products">Nuevos Productos</h2>
+          <NewestSection />
+        </section>
+        <section aria-labelledby="buy-options-popular">
+          <h2 id="buy-options-popular">Productos Más Populares</h2>
+          <BuyOptions title="Most Popular Products" />
+        </section>
+        <Carousel />
+        <WhyBetterSection />
+        <BrandSlider />
+        <ShippingInfo />
+        <section aria-labelledby="buy-options-recently-viewed">
+          <h2 id="buy-options-recently-viewed">
+            <BuyOptions title="Recently Viewed" />
+          </h2>
+        </section>
+      </main>
       <Footer />
     </>
   );

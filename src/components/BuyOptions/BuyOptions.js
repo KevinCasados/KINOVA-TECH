@@ -5,8 +5,6 @@ import {
   ProductCard,
   ProductImage,
   ProductInfo,
-  ProductPrice,
-  ProductImageWrapper
 } from '../ProductsList/styles';
 import {
   BuyOptionsContainer,
@@ -17,8 +15,8 @@ import {
   ProductsGrid,
   DotWrapper,
   Dot,
-  ProductImageWrapperOptions,
-  ProductPriceOptions
+  ProductPriceOptions,
+  ProductImageWrapperOptions
 } from './styles';
 
 const BuyOptions = ({ title = "You May Also Like" }) => {
@@ -26,7 +24,7 @@ const BuyOptions = ({ title = "You May Also Like" }) => {
   const [randomizedProducts, setRandomizedProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
   const itemsPerPage = 3; 
-  const maxPages = 3; // Definimos el máximo de 3 páginas
+  const maxPages = 3; 
   const [isTouchDevice, setIsTouchDevice] = useState(false);
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
@@ -38,7 +36,6 @@ const BuyOptions = ({ title = "You May Also Like" }) => {
     }
   }, [products]);
 
-  // Calculamos el total de páginas basado en el número de productos y limitamos a 3 páginas
   const totalPages = Math.min(Math.ceil(randomizedProducts.length / itemsPerPage), maxPages);
 
   const handleNextPage = () => {
@@ -59,10 +56,10 @@ const BuyOptions = ({ title = "You May Also Like" }) => {
 
   const handleTouchEnd = () => {
     if (touchStartX.current - touchEndX.current > 50) {
-      handleNextPage(); // Desliza a la izquierda
+      handleNextPage(); 
     }
     if (touchStartX.current - touchEndX.current < -50) {
-      handlePreviousPage(); // Desliza a la derecha
+      handlePreviousPage();
     }
   };
 
@@ -76,7 +73,7 @@ const BuyOptions = ({ title = "You May Also Like" }) => {
   );
 
   return (
-    <BuyOptionsContainer>
+    <BuyOptionsContainer aria-label="Product Suggestions" role="region">
       <Title>{title}</Title>
       <CarouselWrapper
         onTouchStart={isTouchDevice ? handleTouchStart : null}
@@ -85,16 +82,31 @@ const BuyOptions = ({ title = "You May Also Like" }) => {
       >
         {window.innerWidth > 1875 && (
           <>
-            <ArrowLeft onClick={handlePreviousPage}>{'<'}</ArrowLeft>
-            <ArrowRight onClick={handleNextPage}>{'>'}</ArrowRight>
+            <ArrowLeft 
+              onClick={handlePreviousPage} 
+              role="button" 
+              aria-label="Previous Products"
+            >
+              {'<'}
+            </ArrowLeft>
+            <ArrowRight 
+              onClick={handleNextPage} 
+              role="button" 
+              aria-label="Next Products"
+            >
+              {'>'}
+            </ArrowRight>
           </>
         )}
         <ProductsGrid>
           {paginatedProducts.map((product) => (
-            <ProductCard key={product.id}>
+            <ProductCard key={product.id} role="listitem">
               <ProductImageWrapperOptions>
-                <Link to={`/products/${product.id}`}>
-                  <ProductImage src={`${process.env.PUBLIC_URL}${product.image}`} alt={product.name} />
+                <Link to={`/products/${product.id}`} aria-label={`View details for ${product.name}`}>
+                  <ProductImage 
+                    src={`${process.env.PUBLIC_URL}${product.image}`} 
+                    alt={product.name} 
+                  />
                 </Link>
               </ProductImageWrapperOptions>
               <ProductInfo>
@@ -105,9 +117,15 @@ const BuyOptions = ({ title = "You May Also Like" }) => {
           ))}
         </ProductsGrid>
       </CarouselWrapper>
-      <DotWrapper>
+      <DotWrapper aria-label="Pagination Dots">
         {Array.from({ length: totalPages }).map((_, index) => (
-          <Dot key={index} active={index === currentPage} onClick={() => setCurrentPage(index)} />
+          <Dot 
+            key={index} 
+            active={index === currentPage} 
+            onClick={() => setCurrentPage(index)} 
+            role="button" 
+            aria-label={`Go to page ${index + 1}`}
+          />
         ))}
       </DotWrapper>
     </BuyOptionsContainer>
@@ -120,4 +138,4 @@ const formatPrice = (price) => {
     .replace('$', '$ ');
 };
 
-export default BuyOptions;
+export default BuyOptions;  

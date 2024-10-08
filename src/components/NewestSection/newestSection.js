@@ -24,28 +24,28 @@ const NewestSection = () => {
     }, []);
 
     return(
-        <SectionContainer>
+        <SectionContainer aria-labelledby="newest-section-title" role="region">
             <SectionTextContainer>
-                <SectionTitle className="text-container">Equipment for advanced play</SectionTitle>
+                <SectionTitle className="text-container" id="newest-section-title">Equipment for advanced play</SectionTitle>
                 <SectionSubtitle className="text-container" >Perform at your best in-game with the best gaming gear from Kinova.</SectionSubtitle>
             </SectionTextContainer>
             <CategoryCard className="newest-sides">
-                <Link to="/products/mouses">
-                    <CategoryImage src={MouseCategoryImg}/>
+                <Link to="/products/mouses" aria-label="Shop for Gaming Mouse">
+                    <CategoryImage src={MouseCategoryImg} alt="Gaming Mouse Shop Banner"/>
                     <CategoryText>Gaming Mouse</CategoryText>
                     <ShopNow className="shop-now">Shop Now</ShopNow>
                 </Link>
             </CategoryCard>
             <CategoryCard className="newest-center">
-                <Link to="/products/keyboards">
-                    <CategoryImage src={KeyboardsCategoryImg}/>
+                <Link to="/products/keyboards" aria-label="Shop for Gaming Keyboards">
+                    <CategoryImage src={KeyboardsCategoryImg} alt="Gaming Keyboards Shop Banner"/>
                     <CategoryText>Gaming Keyboards</CategoryText>
                     <ShopNow className="shop-now">Shop Now</ShopNow>
                 </Link>
             </CategoryCard>
             <CategoryCard className="newest-sides">
-                <Link to="/products/headphones">
-                    <CategoryImage src={HeadphonesboardsCategoryImg} alt="Headphones" />
+                <Link to="/products/headphones" aria-label="Shop for Gaming Headset">
+                    <CategoryImage src={HeadphonesboardsCategoryImg} alt="Gaming Headset Shop Banner"/>
                     <CategoryText>Gaming Headset</CategoryText>
                     <ShopNow className="shop-now">Shop Now</ShopNow>
                 </Link>
