@@ -1,3 +1,44 @@
+# KINOVA-TECH
+
+## Descripción del Proyecto
+**KINOVA-TECH** es una aplicación web de comercio electrónico (E-commerce) completamente funcional, diseñada y desarrollada desde cero. Este proyecto abarca la creación de una **Landing Page**, múltiples páginas como las de productos, carrito de compras y favoritos, e integración con una **API propia**. El desarrollo incorpora tecnologías modernas, optimización de rendimiento y elementos interactivos que ofrecen una experiencia de usuario fluida y atractiva.
+
+Este es el proyecto más completo hasta el momento, integrando todo lo aprendido durante el año en la especialidad de **Ingeniero FrontEnd**, destacándose como una solución robusta y profesional en el desarrollo web.
+
+## Tecnologías Utilizadas
+- **Frontend:**
+  - React.js
+  - Redux (para la gestión del estado global)
+  - JavaScript ES6+
+  - Styled-Components (para estilos dinámicos y modulares)
+- **Backend:**
+  - API propia desarrollada para la gestión de productos y usuarios.
+- **Estilos:**
+  - TailwindCSS
+  - CSS3
+- **Pruebas:**
+  - Testing con Jest y React Testing Library.
+- **Optimización:**
+  - Técnicas de optimización para mejorar los tiempos de carga y la interactividad.
+
+## Funcionalidades Destacadas
+- **Landing Page Interactiva:** Diseño atractivo con elementos dinámicos y **Call To Action** llamativos para incentivar la interacción del usuario.
+- **Páginas Dinámicas:**
+  - Vista de productos con detalles, precios y categorías.
+  - Carrito de compras con actualizaciones en tiempo real.
+  - Favoritos para marcar productos preferidos.
+- **Conexión con API Propia:** Consumo de datos dinámicos mediante solicitudes HTTP para productos, usuarios y favoritos.
+- **Gestión de Estado con Redux:** Control eficiente del estado global para manejar el carrito, favoritos y datos del usuario.
+- **Pruebas:** Implementación de pruebas unitarias y de integración para garantizar la estabilidad del proyecto.
+- **Optimización de Rendimiento:** Técnicas aplicadas para mejorar la velocidad y reducir los tiempos de carga.
+
+## Instrucciones de Instalación y Uso
+Sigue estos pasos para instalar y ejecutar el proyecto localmente:
+
+1. Clona este repositorio:
+   ```bash
+   git clone https://github.com/KevinCasados/KINOVA-TECH.git
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
